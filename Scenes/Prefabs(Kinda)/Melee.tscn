@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dptuacu70cxyj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mym2"]
+
+[sub_resource type="Gradient" id="Gradient_3mym2"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2x7af"]
+gradient = SubResource("Gradient_3mym2")
+
+[node name="Melee" type="Area2D"]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3mym2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.32, 0.32)
+texture = SubResource("GradientTexture2D_2x7af")
