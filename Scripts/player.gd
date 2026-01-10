@@ -12,11 +12,13 @@ var forward = 0
 var maxHealth = 100
 var health = 100
 
+
+
 func _ready() -> void:
 	meleeBox.visible = false
 	
 func TakeDamage(damage: float):
-	health - damage
+	health -= damage
 	if health <= 0:
 		print("Player died")
 
@@ -31,6 +33,7 @@ func _input(event: InputEvent) -> void:
 		
 
 func _physics_process(delta: float) -> void:
+	print(health)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
