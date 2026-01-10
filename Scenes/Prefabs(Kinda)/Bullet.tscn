@@ -11,6 +11,8 @@ colors = PackedColorArray(0.5928073, 0.2779759, 0.5803218, 1, 0.5921569, 0.27843
 gradient = SubResource("Gradient_d1ucf")
 
 [node name="Bullet" type="Area2D"]
+collision_layer = 8
+collision_mask = 21
 script = ExtResource("1_td4pa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

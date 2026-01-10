@@ -14,6 +14,11 @@ var health = 100
 
 func _ready() -> void:
 	meleeBox.visible = false
+	
+func TakeDamage(damage: float):
+	health - damage
+	if health <= 0:
+		print("Player died")
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_left"):
@@ -54,5 +59,3 @@ func _physics_process(delta: float) -> void:
 		meleeBox.visible = true
 	else:
 		meleeBox.visible = false
-	if health <= 0:
-		visible = false
